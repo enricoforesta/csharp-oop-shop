@@ -8,15 +8,22 @@ namespace csharp_oop_shop
 {
     internal class Prodotto
     {
-        public int Code { get; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int Price { get; set; }
-        public int Iva { get; set; }
-
-        public int GetPriceIva()
+        // Costruttore Prodotto
+        public Prodotto() 
         {
-            return this.Iva * this.Price;
+            Random random = new Random();
+            this.Code = random.Next(0,200);
+            this.Iva = 22;
+        }
+        public int Code { get; }
+        public string Name { get; set; } = String.Empty; // Quando è stringa inizializzare la variabile vuota, cosi non è NULL
+        public string Description { get; set; } = String.Empty;
+        public double Price { get; set; }
+        public double Iva { get; set; }
+
+        public double GetPriceIva()
+        {
+            return this.Price + (this.Price * (this.Iva / 100));
         }
         public string GetCodeName()
         {
