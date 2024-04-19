@@ -4,19 +4,81 @@
     {
         static void Main(string[] args)
         {
-            Prodotto mioProdotto = new Prodotto();
+            // Esercizio
+            {
+                Console.WriteLine("Prodotto Base");
+                Prodotto mioProdotto = new Prodotto();
 
-            mioProdotto.Name = "Scarpa";
-            mioProdotto.Description = "Scarpe bellissime";
-            mioProdotto.Price = 150.99;
+                mioProdotto.Name = "Scarpa";
+                mioProdotto.Description = "Scarpe bellissime";
+                mioProdotto.Price = 150.99;
 
-            Console.WriteLine($"Codice: {mioProdotto.Code}");
-            Console.WriteLine($"Nome: {mioProdotto.Name}");
-            Console.WriteLine($"Descrizione: {mioProdotto.Description}");
-            Console.WriteLine($" Il prezzo base: {mioProdotto.Price:F2} €. Il prezzo + Iva: {mioProdotto.GetPriceIva():F2} €");
+                Console.WriteLine($"Codice: {mioProdotto.Code}");
+                Console.WriteLine($"Nome: {mioProdotto.Name}");
+                Console.WriteLine($"Descrizione: {mioProdotto.Description}");
+                Console.WriteLine($"Il prezzo: {mioProdotto.Price:F2} Euro. Il prezzo + Iva: {mioProdotto.GetPriceIva():F2} Euro");
 
-            Console.WriteLine($"Il nome + codice: {mioProdotto.GetCodeName()}");
-            Console.WriteLine("Fine");
+                Console.WriteLine($"Il nome + codice: {mioProdotto.GetCodeName()}");
+                Console.WriteLine($"Il codice Pad : {mioProdotto.GetCodePad()}");
+                Console.WriteLine("Fine");
+                Console.WriteLine("");
+            }
+
+            // Bonus
+            {
+                Console.WriteLine("Prodotto Bonus");
+                Prodotto[] scarpe = new Prodotto[5];
+
+                // Creazione di ogni singolo prodotto di scarpe
+                scarpe[0] = new Prodotto()
+                {
+                    Name = "Scarpe da ginnastica",
+                    Description = "Scarpe comode per attività sportive",
+                    Price = 49.99
+                };
+
+                scarpe[1] = new Prodotto()
+                {
+                    Name = "Scarpe eleganti",
+                    Description = "Scarpe formali per occasioni speciali",
+                    Price = 89.99
+                };
+
+                scarpe[2] = new Prodotto()
+                {
+                    Name = "Scarpe da corsa",
+                    Description = "Scarpe leggere per correre",
+                    Price = 79.99
+                };
+
+                scarpe[3] = new Prodotto()
+                {
+                    Name = "Stivali invernali",
+                    Description = "Stivali caldi per l'inverno",
+                    Price = 129.99
+                };
+
+                scarpe[4] = new Prodotto()
+                {
+                    Name = "Sandali estivi",
+                    Description = "Sandali per l'estate",
+                    Price = 39.99
+                };
+
+                // Stampa delle informazioni su ogni prodotto di scarpe
+                for (int i = 0; i < scarpe.Length; i++)
+                {
+                    Console.WriteLine($"Prodotto {i + 1}:");
+                    Console.WriteLine($"Codice {scarpe[i].Code}");
+                    Console.WriteLine($"Nome: {scarpe[i].Name}");
+                    Console.WriteLine($"Descrizione: {scarpe[i].Description}");
+                    Console.WriteLine($"Prezzo: {scarpe[i].Price:F2} Euro. Il prezzo + Iva: {scarpe[i].GetPriceIva():F2} Euro");
+                    Console.WriteLine($"Il nome + codice: {scarpe[i].GetCodeName()}");
+                    Console.WriteLine($"Il codice Pad : {scarpe[i].GetCodePad()}");
+                    Console.WriteLine("");
+                }
+            }
+
         }
     }
 }
