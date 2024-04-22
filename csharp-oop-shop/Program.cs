@@ -7,6 +7,8 @@
             // Esercizio
             {
                 Console.WriteLine("Prodotto Base");
+                // Prodotto Prodotto = new Prodotto("SCARPE", "BELLE","15");  ESEMPIO SE HO IL COSTRUTTORE CHE ACCETTA PARAMETRI (IVA E DEFAULT MA PUO ASSUMERE ALTRO VALORE)
+
                 Prodotto mioProdotto = new Prodotto();
 
                 mioProdotto.Name = "Scarpa";
@@ -16,7 +18,7 @@
                 Console.WriteLine($"Codice: {mioProdotto.Code}");
                 Console.WriteLine($"Nome: {mioProdotto.Name}");
                 Console.WriteLine($"Descrizione: {mioProdotto.Description}");
-                Console.WriteLine($"Il prezzo: {mioProdotto.Price:F2} Euro. Il prezzo + Iva: {mioProdotto.GetPriceIva():F2} Euro");
+                Console.WriteLine($"Il prezzo: {mioProdotto.GetPrice:F2} Euro. Il prezzo + Iva: {mioProdotto.GetPriceIva():F2} Euro");
 
                 Console.WriteLine($"Il nome + codice: {mioProdotto.GetCodeName()}");
                 Console.WriteLine($"Il codice Pad : {mioProdotto.GetCodePad()}");
@@ -27,7 +29,7 @@
             // Bonus
             {
                 Console.WriteLine("Prodotto Bonus");
-                Prodotto[] scarpe = new Prodotto[]
+                Prodotto[] scarpe = 
                 {
                     new Prodotto()
                     {

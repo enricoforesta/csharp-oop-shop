@@ -8,26 +8,43 @@ namespace csharp_oop_shop
 {
     internal class Prodotto
     {
-        // Costruttore Prodotto
-        public Prodotto() 
-        {
-            Random random = new Random();
-            this.Code = random.Next(0,200);
-            this.Iva = 22;
-        }
+       
         public int Code { get; }
         public string Name { get; set; } = String.Empty; // Quando è stringa inizializzare la variabile vuota, cosi non è NULL
         public string Description { get; set; } = String.Empty;
         public double Price { get; set; }
         public double Iva { get; set; }
 
+        // Costruttore Prodotto
+        public Prodotto()
+        {
+            Random random = new Random();
+            this.Code = random.Next(0, 200);
+            this.Iva = 22;
+        }
+        /*
+         * QUESTO ESEMPIO DI COSTRUTTORE CI FACILITA QUANDO ISTAZIAMO I NOSTRI OGGETTI. ---->
+        public Prodotto(string name, string Description, double price, double iva = 22)
+        {
+            Random random = new Random();
+            this.Code = random.Next(0, 200);
+          this.Name = name;
+            this.Description = Description;
+            this.Price = price;
+        }
+        */
+
+        public double GetPrice()
+        {
+            return this.Price ;
+        }
         public double GetPriceIva()
         {
             return this.Price + (this.Price * (this.Iva / 100));
         }
         public string GetCodeName()
         {
-            return this.Code.ToString() + this.Name;
+            return this.Code.ToString() + "-" + this.Name;
         }
 
         public string GetCodePad()
