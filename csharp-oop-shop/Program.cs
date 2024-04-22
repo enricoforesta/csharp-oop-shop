@@ -27,42 +27,38 @@
             // Bonus
             {
                 Console.WriteLine("Prodotto Bonus");
-                Prodotto[] scarpe = new Prodotto[5];
-
-                // Creazione di ogni singolo prodotto di scarpe
-                scarpe[0] = new Prodotto()
+                Prodotto[] scarpe = new Prodotto[]
                 {
-                    Name = "Scarpe da ginnastica",
-                    Description = "Scarpe comode per attività sportive",
-                    Price = 49.99
-                };
-
-                scarpe[1] = new Prodotto()
-                {
-                    Name = "Scarpe eleganti",
-                    Description = "Scarpe formali per occasioni speciali",
-                    Price = 89.99
-                };
-
-                scarpe[2] = new Prodotto()
-                {
-                    Name = "Scarpe da corsa",
-                    Description = "Scarpe leggere per correre",
-                    Price = 79.99
-                };
-
-                scarpe[3] = new Prodotto()
-                {
-                    Name = "Stivali invernali",
-                    Description = "Stivali caldi per l'inverno",
-                    Price = 129.99
-                };
-
-                scarpe[4] = new Prodotto()
-                {
-                    Name = "Sandali estivi",
-                    Description = "Sandali per l'estate",
-                    Price = 39.99
+                    new Prodotto()
+                    {
+                        Name = "Scarpe da ginnastica",
+                        Description = "Scarpe comode per attività sportive",
+                        Price = 49.99
+                    },
+                    new Prodotto()
+                    {
+                        Name = "Scarpe eleganti",
+                        Description = "Scarpe formali per occasioni speciali",
+                        Price = 89.99
+                    },
+                    new Prodotto()
+                    {
+                        Name = "Scarpe da corsa",
+                        Description = "Scarpe leggere per correre",
+                        Price = 79.99
+                    },
+                    new Prodotto()
+                    {
+                        Name = "Stivali invernali",
+                        Description = "Stivali caldi per l'inverno",
+                        Price = 129.99
+                    },
+                    new Prodotto()
+                    {
+                        Name = "Sandali estivi",
+                        Description = "Sandali per l'estate",
+                        Price = 39.99
+                    }
                 };
 
                 // Stampa delle informazioni su ogni prodotto di scarpe
